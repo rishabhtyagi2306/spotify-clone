@@ -10,6 +10,8 @@ body{
 }
 
 nav{
+    position: sticky;
+    top: 0;
     font-family: 'Roboto', sans-serif;
     background-color: black;
     height: 50px;
@@ -25,6 +27,7 @@ nav ul{
 
 nav ul li{
     padding: 0 10px;
+    cursor: pointer;
 }
 
 .brand{
@@ -42,7 +45,45 @@ nav ul li{
 
 /*---------------------------------------------- container ----------------------------------------------*/
 .container{
-    height: 80vh;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    color: white;
+    margin: 20px 180px;
+    border-radius: 34px;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 18px;
+    padding-bottom: 28px;
+}
+
+.songList{
+    background-color: white;
+    color: black;
+    width: 470px;
+    border-radius: 34px;
+    padding: 5px 18px;
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.songList span{
+    display: flex;
+    align-items: center;
+}
+
+.timestamp i{
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.songList img{
+    height: 34px;
+    width: auto;
+    border-radius: 34px;
 }
 
 /*---------------------------------------------- bottom bar ----------------------------------------------*/
