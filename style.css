@@ -112,3 +112,19 @@ nav ul li{
 .icons i{
     cursor: pointer;
 }
+
+.songName{
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    padding-top: 25px;
+    margin-left: 10vw;
+}
+
+.songName img{
+    opacity: 0;
+    transition: ease-in;
+}
+
+.songName span{
+    padding-left: 3px;
+}
