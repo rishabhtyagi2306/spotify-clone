@@ -122,7 +122,7 @@ nav ul li{
 
 .songName img{
     opacity: 0;
-    transition: ease-in;
+    transition: opacity 0.4s ease-in;
 }
 
 .songName span{
