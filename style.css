@@ -70,6 +70,12 @@ nav ul li{
     justify-content: space-between;
 }
 
+/* .songName{
+    display: flex;
+    align-items: center;
+    padding-bottom: 26px;
+} */
+
 .songList span{
     display: flex;
     align-items: center;
@@ -83,7 +89,7 @@ nav ul li{
 .songList img{
     height: 34px;
     width: auto;
-    border-radius: 34px;
+    border-radius: 50%;
 }
 
 /*---------------------------------------------- bottom bar ----------------------------------------------*/
