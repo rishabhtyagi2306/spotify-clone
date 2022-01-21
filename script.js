@@ -1,13 +1,12 @@
 console.log('Welcome');
 
-let songIndex = 0;
 let audioElement = new Audio('./songs/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
 let songItems = Array.from(document.getElementsByClassName('songList'));
 let songItemsPlay = Array.from(document.getElementsByClassName('songListPlay'));
-let songID = 1;
+let songIndex = 1;
 
 let songs = [
     {songName: "song 1", filePath: "./songs/1.mp3", coverPath: "./covers/1.jpg"},
@@ -66,7 +65,7 @@ songItemsPlay.forEach((element, i) => {
         makeAllPlays();
         index = parseInt(e.target.id);
         // console.log(index);
-        if(index == songID){
+        if(index == songIndex){
             if(audioElement.paused || audioElement.currentTime <= 0){
                 audioElement.play();
                 masterPlay.classList.remove('fa-play-circle');
@@ -95,6 +94,36 @@ songItemsPlay.forEach((element, i) => {
             audioElement.play();
             gif.style.opacity = 1;
         }
-        songID = index;
+        songIndex = index;
     })
+});
+
+document.getElementById('next').addEventListener('click', ()=>{
+    if(songIndex == 10){
+        songIndex = 1;
+    }
+    else{
+        songIndex += 1;
+    }
+    strind = "songs/" + songIndex.toString() + ".mp3";
+    audioElement.src = strind;
+    console.log(strind);
+    audioElement.currentTime = 0;
+    audioElement.play();
+    gif.style.opacity = 1;
+});
+
+document.getElementById('previous').addEventListener('click', ()=>{
+    if(songIndex == 1){
+        songIndex = 10;
+    }
+    else{
+        songIndex -= 1;
+    }
+    strind = "songs/" + songIndex.toString() + ".mp3";
+    audioElement.src = strind;
+    console.log(strind);
+    audioElement.currentTime = 0;
+    audioElement.play();
+    gif.style.opacity = 1;
 });
